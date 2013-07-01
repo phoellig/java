@@ -20,9 +20,11 @@
 
 Chef::Log.warn("No download url set for java installer.") unless node['java']['windows']['url']
 
+install_args = '/s INSTALLDIR="' + node['java']['windows']['install_dir'] + '"'
+
 windows_package node['java']['windows']['package_name'] do
   source node['java']['windows']['url']
   action :install
   installer_type :custom
-  options "/s"
+  options install_args
 end

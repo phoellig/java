@@ -73,6 +73,8 @@ the .tar.gz.
 * `node['java']['windows']['package_name']` - The package name used by
   windows_package to check in the registry to determine if the install
   has already been run
+* `node['java']['windows']['install_dir']` - The directory in which java
+  should be installed on windows. Defaults to C:/Java.
 * `node['java']['ibm']['url']` - The URL which to download the IBM
   JDK/SDK. See the `ibm` recipe section below.
 * `node['java']['ibm']['accept_ibm_download_terms']` - Indicates that
